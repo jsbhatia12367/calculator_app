@@ -60,7 +60,7 @@ public class calculator extends javax.swing.JFrame {
         backspace = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CALCULATOR");
+        setTitle("MyCalculator");
         setBackground(new java.awt.Color(0, 0, 0));
 
         buttonGroup1.add(on);
@@ -334,8 +334,6 @@ public class calculator extends javax.swing.JFrame {
                             .addComponent(equal))
                         .addGap(0, 11, Short.MAX_VALUE))))
         );
-
-        backspace.getAccessibleContext().setAccessibleName("<-");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
