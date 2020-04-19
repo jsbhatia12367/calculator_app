@@ -5,6 +5,9 @@
  */
 package com.mycompany.calculator_app;
 
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
 /**
  *
  * @author jagmeet
@@ -14,6 +17,8 @@ public class calculator extends javax.swing.JFrame {
     /**
      * Creates new form calculator
      */
+    public static String answer ="test3";
+   public static String answer2 ="notmodified";
     public calculator() {
         initComponents();
         on.setEnabled(false);
@@ -417,10 +422,16 @@ public class calculator extends javax.swing.JFrame {
                 //break;
                 case '%':
                 return (d1%d2)+"";
-                //reak;
+                //break;
         }
         return ""; 
     }
+    public void multiplyActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    multiplyActionPerformed(evt);
+    
+}
     private void multiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyActionPerformed
         String str = jTextField1.getText();
         //jTextField1.setText("");
@@ -442,6 +453,7 @@ public class calculator extends javax.swing.JFrame {
                num1 = Double.parseDouble(str);  
             }
             jTextField1.setText("");
+            answer = "";
              jLabel1.setText(num1+"*");
         }
         
@@ -454,53 +466,133 @@ public class calculator extends javax.swing.JFrame {
     private void offActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offActionPerformed
         disable();
     }//GEN-LAST:event_offActionPerformed
-
+   public void jButton7ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton7ActionPerformed(evt);
+    
+}
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         jTextField1.setText(jTextField1.getText()+"7");
+        answer = jTextField1.getText()+"7";
     }//GEN-LAST:event_jButton7ActionPerformed
-
+ public void jButton1ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton1ActionPerformed(evt);
+    
+}
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextField1.setText(jTextField1.getText()+"1");
+        answer = jTextField1.getText()+"1";
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    public void jButton8ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton8ActionPerformed(evt);
+    
+}
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
        jTextField1.setText(jTextField1.getText()+"8");
+       answer = jTextField1.getText()+"8";
     }//GEN-LAST:event_jButton8ActionPerformed
-
+    public void jButton9ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton9ActionPerformed(evt);
+    
+}
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         jTextField1.setText(jTextField1.getText()+"9");
+        answer = jTextField1.getText()+"9";
     }//GEN-LAST:event_jButton9ActionPerformed
-
+    public void jButton6ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton6ActionPerformed(evt);
+    
+}
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         jTextField1.setText(jTextField1.getText()+"6");
+        answer = jTextField1.getText();
     }//GEN-LAST:event_jButton6ActionPerformed
-
+    public void jButton5ActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    jButton5ActionPerformed(evt);
+    
+    }
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         jTextField1.setText(jTextField1.getText()+"5");
+        answer = jTextField1.getText();
     }//GEN-LAST:event_jButton5ActionPerformed
-
+public void jButton4ActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    jButton4ActionPerformed(evt);
+    
+    }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         jTextField1.setText(jTextField1.getText()+"4");
+        answer = jTextField1.getText();
     }//GEN-LAST:event_jButton4ActionPerformed
-
+public void jButton3ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton3ActionPerformed(evt);
+    
+}
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        jTextField1.setText(jTextField1.getText()+"3");
+       //answer = jTextField1.getText()+"3";
+       answer = jTextField1.getText();
+       answer2+="3";
     }//GEN-LAST:event_jButton3ActionPerformed
-
+public void jButton2ActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    jButton2ActionPerformed(evt);
+    
+}
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextField1.setText(jTextField1.getText()+"2");
+        //answer = jTextField1.getText()+"2";
+        answer = jTextField1.getText();
+        answer2+="2";
     }//GEN-LAST:event_jButton2ActionPerformed
-
+public void acActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    acActionPerformed(evt);
+    
+    }
     private void acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acActionPerformed
         jTextField1.setText( "");
+        jLabel1.setText("");
+        flag=0;
+       answer = jTextField1.getText();
     }//GEN-LAST:event_acActionPerformed
-
+    public void backspaceActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    backspaceActionPerformed(evt);
+    
+    }
     private void backspaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backspaceActionPerformed
          String str = jTextField1.getText();
          if(str.length()>0)
-         jTextField1.setText(str.substring(0,str.length()-1));
+         {
+          jTextField1.setText(str.substring(0,str.length()-1));
+         answer = jTextField1.getText();  
+         }
+         
     }//GEN-LAST:event_backspaceActionPerformed
-
+    public void negationActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    negationActionPerformed(evt);
+    
+    }
     private void negationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negationActionPerformed
        String str = jTextField1.getText();
        if(str.length()>0 && str.charAt(0)=='-')
@@ -508,12 +600,24 @@ public class calculator extends javax.swing.JFrame {
        else
            str = "-"+str;
        jTextField1.setText(str);
+        answer = jTextField1.getText(); 
     }//GEN-LAST:event_negationActionPerformed
-
+    public void jButton0ActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    jButton0ActionPerformed(evt);
+    
+    }
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
         jTextField1.setText(jTextField1.getText()+"0");
+         answer = jTextField1.getText(); 
     }//GEN-LAST:event_jButton0ActionPerformed
-
+    public void modulasActionPerformedCall()
+    {
+        java.awt.event.ActionEvent evt = null;
+    modulasActionPerformed(evt);
+    
+    }
     private void modulasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modulasActionPerformed
           String str = jTextField1.getText();
         //jTextField1.setText("");
@@ -535,22 +639,31 @@ public class calculator extends javax.swing.JFrame {
                num1 = Double.parseDouble(str);  
             }
             jTextField1.setText("");
+            answer = jTextField1.getText();
              jLabel1.setText(num1+"%");
         }
     }//GEN-LAST:event_modulasActionPerformed
-
+public void equalActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    equalActionPerformed(evt);
+    //jTextField1.setText("executed");
+    
+}
     private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
         
         String str = jTextField1.getText();
         if(flag==0)
         {
-          // return; 
+          // return;
+             answer2=answer2+"ifs=";
         }
         else
         {
            if(str.length()==0 || (str.length()==1 && str.charAt(0)=='-'))
            {
             // return;  
+               answer2=answer2+"if=";
            }
             else
             {
@@ -566,11 +679,103 @@ public class calculator extends javax.swing.JFrame {
                    num2 = Double.parseDouble(str);  
                 }
                jTextField1.setText(fun(num1,num2));
+              answer = jTextField1.getText();
+              answer2=answer2+"i=";
+               //answer="5";
+              // answer2 ="modified"; 
                jLabel1.setText("");
             } 
+           answer2=answer2+"e=";
         }
+        //jTextField1.setText("0");
+        // answer = jTextField1.getText();
+        answer2=answer2+"o=";
     }//GEN-LAST:event_equalActionPerformed
-
+    public void cal(char c) {
+        java.awt.event.ActionEvent evt;
+         //calculator instance = new calculator();
+        switch(c)
+        {
+                case '+':
+                additionActionPerformedCall();
+                break;
+                case '-':
+                subtractionActionPerformedCall();
+                break;
+                //break;
+                case '*':
+                multiplyActionPerformedCall();
+                break;
+                //break;
+                case '/':
+                divideActionPerformedCall();
+                break;
+                //break;
+                case '%':
+                modulasActionPerformedCall();
+                break;
+                //break;
+                case '=':
+                equalActionPerformedCall();
+                break;
+                case 'b':
+                backspaceActionPerformedCall();
+                break;
+                case 'm':
+                negationActionPerformedCall();
+                break;
+                case 'c':
+                acActionPerformedCall();
+                break;
+                case '1':
+                jButton1ActionPerformedCall();
+                break;
+                case '2':
+                jButton2ActionPerformedCall();
+                break;
+                case '3':
+                jButton3ActionPerformedCall();
+                break;
+                case '4':
+                jButton4ActionPerformedCall();
+                break;
+                case '5':
+                jButton5ActionPerformedCall();
+                break;
+                case '6':
+                jButton6ActionPerformedCall();
+                break;
+                case '7':
+                jButton7ActionPerformedCall();
+                break;
+                case '8':
+                jButton8ActionPerformedCall();
+                break;
+                case '9':
+                jButton9ActionPerformedCall();
+                break;
+                case '0':
+                jButton0ActionPerformedCall();
+                break;
+                case '.':
+               dotActionPerformedCall();
+                break;
+        }
+    }
+    public void call(String exp)
+    {
+       for(int i=0;i<exp.length();i++)
+        {
+          cal(exp.charAt(i));  
+        } 
+    }
+    public void subtractionActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    subtractionActionPerformed(evt);
+    
+    
+}
     private void subtractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionActionPerformed
           String str = jTextField1.getText();
         //jTextField1.setText("");
@@ -592,10 +797,17 @@ public class calculator extends javax.swing.JFrame {
                num1 = Double.parseDouble(str);  
             }
             jTextField1.setText("");
+            answer = jTextField1.getText();
              jLabel1.setText(num1+"-");
         }
     }//GEN-LAST:event_subtractionActionPerformed
-
+    public void divideActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    divideActionPerformed(evt);
+    
+    
+}
     private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
           String str = jTextField1.getText();
         //jTextField1.setText("");
@@ -617,10 +829,16 @@ public class calculator extends javax.swing.JFrame {
                num1 = Double.parseDouble(str);  
             }
             jTextField1.setText("");
+            answer = jTextField1.getText();
              jLabel1.setText(num1+"/");
         }
     }//GEN-LAST:event_divideActionPerformed
-
+public void additionActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+    additionActionPerformed(evt);
+    
+}
     private void additionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionActionPerformed
           String str = jTextField1.getText();
         //jTextField1.setText("");
@@ -642,15 +860,25 @@ public class calculator extends javax.swing.JFrame {
                num1 = Double.parseDouble(str);  
             }
             jTextField1.setText("");
+            answer = jTextField1.getText();
              jLabel1.setText(num1+"+");
         }
+        answer2=answer2+"+";
     }//GEN-LAST:event_additionActionPerformed
-
+public void dotActionPerformedCall()
+{
+        java.awt.event.ActionEvent evt = null;
+   dotActionPerformed(evt);
+    
+}
     private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
         String str = jTextField1.getText();
         
         if(str.length()==0)
+        {
             jTextField1.setText("0.");
+            answer = jTextField1.getText();
+        }
         else if(str.length()>0 && str.indexOf('.')>=0)
         {
             //return;
@@ -659,7 +887,8 @@ public class calculator extends javax.swing.JFrame {
             
         else
         {
-          jTextField1.setText(str+".");  
+          jTextField1.setText(str+"."); 
+          answer = jTextField1.getText();
         }
         
     }//GEN-LAST:event_dotActionPerformed
@@ -698,7 +927,15 @@ public class calculator extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public String getTextField1()
+    {
+        return jTextField1.getText();
+    }
+    public String getAnswer()
+    {
+        return answer;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ac;
     private javax.swing.JButton addition;
