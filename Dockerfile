@@ -6,4 +6,4 @@ COPY pom.xml /usr/local/calculator_app/pom.xml
 COPY src /usr/local/calculator_app/src
 WORKDIR /usr/local/calculator_app
 RUN mvn package
-CMD ["java","-cp","target/docker-image.jar","calculator.App"]
+CMD ["java","-cp","target/docker-image.jar","com.mycompany.calculator_app.calculator"]
